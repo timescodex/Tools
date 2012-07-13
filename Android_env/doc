@@ -1,0 +1,6 @@
+How to intergret Anroid with eclipse:
+1.download Android SDK from the official website
+2.download ADT plugin in the eclipse
+3.Download the API reference
+4.Go the Android sdk find the android execute file and run android create avd --target 2 --name cupcake
+5.Test whether create the avd run ./android list avd
