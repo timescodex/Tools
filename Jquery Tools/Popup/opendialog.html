@@ -1,0 +1,39 @@
+
+<head>
+		<link type="text/css" href="css/ui-lightness/jquery-ui-1.8.21.custom.css" rel="stylesheet" />
+		<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.8.21.custom.min.js"></script>
+</head>
+<meta charset="utf-8">
+<script>
+$(function(){
+				$('#dialog').dialog({
+					autoOpen: false,
+					width: 600,
+					buttons: {
+						"发送": function() {
+							$(this).dialog("close");
+						},
+						"取消": function() {
+							$(this).dialog("close");
+						}
+					}
+				});
+
+				// Dialog Link
+				$('#dialog_link').click(function(){
+					$('#dialog').dialog('open');
+					return false;
+				});
+
+});
+
+</script>
+<body>
+		<p><a href="#" id="dialog_link" class="ui-state-default ui-corner-all"><span class="ui-icon ui-icon-newwin"></span>发私信</a></p>
+		<!-- ui-dialog -->
+		<div id="dialog" title="发私信">
+			发送给：<input type="text"/></br>
+		    <textarea style="width:500;height:300"></textarea>
+			<p>验证码:</p><input>
+		</div>
